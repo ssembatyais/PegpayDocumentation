@@ -1,0 +1,88 @@
+﻿/* Move down content because we have a fixed navbar that is 50px tall */
+*{
+    box-sizing:border-box;
+    line-height:1.5;
+    
+}
+li{
+    line-height:25px;
+}
+
+a{
+    list-style:none;
+
+}
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+
+}
+
+.footerdown {
+    position: fixed;
+    height: 50px;
+    background-color: aliceblue;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+}
+
+p{
+    line-height:25px;
+}
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+   
+}
+.peglogo {
+    height: 30px;
+    width: 10vw;
+}
+.pegname{
+    height:30px;
+    width:10vw;
+
+}
+.search {
+    margin-right: 50px;
+    align-items: center;
+    margin-top: 10px;
+    border-radius: 7px;
+    color: #043268;
+    padding:3px;
+}
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+.styleup {
+    white-space: normal;
+    color: #043268;
+}
+.sidebarList {
+    font-weight: 500 !important;
+    padding:5px;
+    font-size:17px;
+}
+    .sidebarList > a, a:hover {
+        text-decoration: none;
+        white-space: normal;
+        color: #043268;
+    }
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .jumbotron {
+        margin-top: 20px;
+    }
+
+    .body-content {
+        padding: 0;
+    }
+}
