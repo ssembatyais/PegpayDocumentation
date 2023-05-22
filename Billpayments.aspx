@@ -45,7 +45,8 @@
                                 Pegasus Technologies Ltd is a payments Aggregator/Integrator company with existing relationships with a number of Banks and Mobile Money Service Providers through which customers can settle any payments. Pegasus Technologies also has existing relationships with a number of service providers who would like to have payments for their services settled through the PegPayAPI Payments Platform that acts as an interface between service providers and payments handlers.
                             </p>
                             <p>
-                                In the past, any customer of any service provider wishing to make a payment would be required to walk into any partnering bank or mobile money kiosk and pay for their services. However, this  arrangement has a number of challenges that include the following:
+                                In the past, any customer of any service provider wishing to make a payment would be required to walk into any partnering bank or mobile money kiosk and pay for their services. However, this  arrangement has a number of challenges that include the following:
+
                             </p>
                             <ul>
                                 <li>
@@ -129,7 +130,8 @@ PostTransactionRequest which includes the Vendor Transaction ID, amount, Custome
 digital signature to PegPayAPI.
                                     <br />
                                     PegPayAPI validates request including verifying digital signature to make sure data has not been 
-tampered with or altered whilst in transit. </li>
+tampered with or altered whilst in transit.
+ </li>
                                 <ul>
                                     <li>If Request is valid PegPayAPI returns PostTransactionResponse to Vendor System which 
 indicates the transaction is PENDING. PegPayAPI goes ahead to process the request 
@@ -142,7 +144,8 @@ GetTransactionStatusRequest which has Vendor Transaction ID among the expected p
 to the PegPayAPI. PegPayAPI Validates API and retrieves Transaction Status and Details for 
 Transaction with ID=Vendor Transaction ID before returning a GetTransactionStatusResponse to the Vendor System.
     <br />
-                                    The GetTransactionStatusResponse has a flag that indicatesthe transaction status.
+                                    The GetTransactionStatusResponse has a flag that indicatesthe transaction status.
+
                                 </li>
                                 <ul>
                                     <li>If Transaction Status is FAILED, Vendor System stops polling for transaction status and notifies customer of failure. </li>
@@ -173,7 +176,8 @@ subsequent utilities will work.
 customer databases and validate the paying customers’ information before they proceed to 
 effect any transactions for these customers. By so doing, this will reduce on any errors that will 
 be introduced into the database by the collecting agents. Errors such as crediting the wrong 
-account will be eliminated by using this functionality to validate customer data. </dt>
+account will be eliminated by using this functionality to validate customer data.
+ </dt>
                             </dl>
                             <h4>Stimulus/Response Sequences </h4>
                             <dl>
@@ -205,7 +209,8 @@ SOAPAction: "http://PegPayPaymentsApi/QueryCustomerDetails"
 &ltquery>
 &lt/QueryCustomerDetails>
 &lt/soap:Body>
-&lt/soap:Envelope>
+&lt/soap:Envelope>
+
 </code>
 </pre>
                             <h5>Below is the description of the common expected parameters.</h5>
@@ -247,7 +252,8 @@ SOAPAction: "http://PegPayPaymentsApi/QueryCustomerDetails"
                             <h3>Digital Signature</h3>
 
                             <strong>dataToSign = VendorCode + Password + UtilityCode + CustomerRef OR literally
-(QueryField5 + QueryField6 + QueryField4 + QueryField1) </strong>
+(QueryField5 + QueryField6 + QueryField4 + QueryField1)
+ </strong>
                             <p>A sample of the utilityCode for (NWSC, UMEME)</p>
                             <pre>
  <code style="white-space:pre-wrap">
@@ -271,7 +277,8 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   </code>
  </pre>
                             <p>
-                                Below is the description of the common expected parameters.
+                                Below is the description of the common expected parameters.
+
                             </p>
                             <table class="table">
                                 <thead>
@@ -529,9 +536,12 @@ customer details. The method used to make payments is: PrepaidVendorPostTransact
                                 <dt>Stimulus/Response Sequences</dt>
                                 <dt>Stimulus </dt>
                                 <dd>When posting a payment, the vendor hasto wrap the parameters of the transaction in an object 
-of type: TransactionRequest and pass it over to the PegPayAPI platform for posting. </dd>
-                                <dd>he parameters posted through this object are described below: </dd>
-                                <dt>PrepaidVendorPostTransaction (TransactionRequest trans)</dt>
+of type: TransactionRequest and pass it over to the PegPayAPI platform for posting.
+ </dd>
+                                <dd>he parameters posted through this object are described below:
+ </dd>
+                                <dt>PrepaidVendorPostTransaction (TransactionRequest trans)
+</dt>
                                 <dd>The expected PostTransactionRequest is expected to look like this</dd>
 
 
@@ -784,7 +794,8 @@ SOAPAction: "http://PegPayPaymentsApi/PrepaidVendorPostTransaction"
                             `
                             <h4>Response </h4>
                             <p>
-                                The system will respond by returning an object of type: PostResponse It will have
+                                The system will respond by returning an object of type: PostResponse It will have
+
                             </p>
                             <ol>
                                 <li>StatusCode</li>
@@ -863,7 +874,8 @@ Content-Length: length
 &lt/PrepaidVendorPostTransactionResult>
 &lt/PrepaidVendorPostTransactionResponse>
 &lt/soap:Body>
-&lt/soap:Envelope>
+&lt/soap:Envelope>
+
   </code>
   </pre>
                             <p>Below isthe description of the commonly returned parameters </p>
@@ -922,7 +934,8 @@ Content-Length: length
 &lt/trans>
 &lt/PrepaidVendorPostTransaction>
 &lt/s:Body>
-&lt/s:Envelope> </code>
+&lt/s:Envelope>
+ </code>
              </pre>
                                 </dd>
                             </dl>
@@ -993,7 +1006,8 @@ Content-Length: length
  &lt/trans>
  &lt/PrepaidVendorPostTransaction>
  &lt/soap:Body>
- &lt/soap:Envelope>
+ &lt/soap:Envelope>
+
 </code>
  </pre>
                                 </dd>
@@ -1093,7 +1107,8 @@ PegPay system.
                                     AU: ALL
                                 </dd>
                                 <dt>FN:Transaction Amount </dt>
-                                <dd>Desc: The amount of money received from the customer
+                                <dd>Desc: The amount of money received from the customer
+
                                     <br />
                                     Type: big integer<br />
                                     Const: 1 to 999,999,999
@@ -1155,7 +1170,8 @@ on the interface
                                 </dd>
                                 <dt>FN: TranIdToReverse </dt>
                                 <dd>Desc: When a transaction is a reversal, the ID being reversed is passed in this field. This is the
-VendorTranId of the transaction being reversed
+VendorTranId of the transaction being reversed
+
                                     <br />
                                     Type: string<br />
                                     Const: 1 to 30 characters<br />
@@ -1175,11 +1191,13 @@ customers for (Electricity). The customer types and their codes are stated in th
                                     <br />
                                     Type: string<br />
                                     Const: 1<br />
-                                    AU: KCCA/UMEME
+                                    AU: KCCA/UMEME
+
                                 </dd>
                                 <dt>FN: Reversal </dt>
                                 <dd>Desc: A flag that indicates whether the transaction being posted is a reversal or not. The code is 
-1 if it’s a reversal or 0 if it’s a normal credit transaction.
+1 if it’s a reversal or 0 if it’s a normal credit transaction.
+
                                     <br />
                                     Type: string<br />
                                     Const: 1
@@ -1292,7 +1310,8 @@ or added due to foreign exchange
                                 </dd>
                                 <dt>FN: Fuel </dt>
                                 <dd>Desc:A prepaid token field that indicates how much of the payment amount has been deducted 
-or added due to fuel
+or added due to fuel
+
                                     <br />
                                     Type: string<br />
                                     Const: 1 to 15 characters<br />
@@ -1307,7 +1326,8 @@ deductions
                                     AU: Electricity
                                 </dd>
                                 <dt>FN: PrepaidToken </dt>
-                                <dd>Desc: A prepaid token field that contains the actual token purchased
+                                <dd>Desc: A prepaid token field that contains the actual token purchased
+
                                     <br />
                                     Type: string<br />
                                     Const:20 characters<br />
@@ -1695,25 +1715,162 @@ being made
                                         <td>Area (NWSC)/BouquetCode(DSTV).etc.</td>
                                     </tr>
                                     <tr>
-                                        <td>QueryField4</td>
-                                        <td>UtilityCode(NWSC,UMEME,DSTV etc.)</td>
+                                        <td>2</td>
+                                        <td>INVALID PEGPAY VENDOR CREDENTIALS</td>
                                     </tr>
                                     <tr>
-                                        <td>QueryField5</td>
-                                        <td>VendorCode</td>
+                                        <td>3</td>
+                                        <td>INVALID TRANSACTION AMOUNT</td>
                                     </tr>
                                     <tr>
-                                        <td>QueryField6</td>
-                                        <td>Password</td>
+                                        <td>4</td>
+                                        <td>INVALID PAYMENT DATE</td>
                                     </tr>
                                     <tr>
-                                        <td>QueryField8</td>
-                                        <td>DigitalSignature</td>
+                                        <td>5</td>
+                                        <td>INVALID TRANSACTION TYPE</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>INVALID CUSTOMER TELEPHONE</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>INVALID PAYMENT TYPE</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>TELLER DETAILS REQUIRED</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>TRANSACTION DETAILS ALREADY RECEIVED</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>GENERAL ERROR AT Utilit</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11</td>
+                                        <td>VENDOR CREDENTIALS HAVE BEEN DEACTIVATED.PLEASE CONTACT PEGASUS TECHNOLOGIES</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                        <td>INVALID PHONE NUMBER</td>
+                                    </tr>
+                                    <tr>
+                                        <td>13</td>
+                                        <td>CUSTOMER NAME NOT SUPPLIED</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14</td>
+                                        <td>TRANSACTION TYPE NOT SUPPLIED. EG CASH,EFT</td>
+                                    </tr>
+                                    <tr>
+                                        <td>15</td>
+                                        <td>PAYMENT TYPE NOT SUPPLIED. EG 2,3,4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>16</td>
+                                        <td>VENDOR TRANSACTION REFERENCE NOT SUPPLIED</td>
+                                    </tr>
+                                    <tr>
+                                        <td>17</td>
+                                        <td>TELLER DETAILS NOT SUPPLIED</td>
+                                    </tr>
+                                    <tr>
+                                        <td>18</td>
+                                        <td>SIGNATURE NOT VALID AT PEGPAY</td>
+                                    </tr>
+                                    <tr>
+                                        <td>19</td>
+                                        <td>SIGNATURE NOT PROVIDED</td>
+                                    </tr>
+                                    <tr>
+                                        <td>20</td>
+                                        <td>DUPLICATE VENDOR REFERENCE AT PEGPAY</td>
+                                    </tr>
+                                    <tr>
+                                        <td>21</td>
+                                        <td>SUSPECTED DOUBLE POSTING AT PEGPAY</td>
+                                    </tr>
+                                    <tr>
+                                        <td>22</td>
+                                        <td>ORIGINAL VENDOR TRANSACTION REFERENCE NOT SUPPLIED</td>
+                                    </tr>
+                                    <tr>
+                                        <td>23</td>
+                                        <td>TRANSACTION NARATION IS REQUIRED</td>
+                                    </tr>
+                                    <tr>
+                                        <td>24</td>
+                                        <td>INVALID ORIGINAL VENDOR TRANSACTIONREFERENCE</td>
+                                    </tr>
+                                    <tr>
+                                        <td>25</td>
+                                        <td>INVALID TRANSACTION REVERSAL STATUS SUPPLIED. EG 0 or 1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>26</td>
+                                        <td>AMOUNT TO REVERSE DOES NOT MATCH WITH AMOUNT REVERSING</td>
+                                    </tr>
+                                    <tr>
+                                        <td>27</td>
+                                        <td>INVALID PAYMENT CODE</td>
+                                    </tr>
+                                    <tr>
+                                        <td>28</td>
+                                        <td>INVALID CUSTOMER TYPE EG POSTPAID or PREPAID</td>
+                                    </tr>
+                                    <tr>
+                                        <td>29</td>
+                                        <td>UTILITY CREDENTIALS NOT SET</td>
+                                    </tr>
+                                    <tr>
+                                        <td>30</td>
+                                        <td>UNABLE TO CONNECT TO UTILITY</td>
+                                    </tr>
+                                    <tr>
+                                        <td>31</td>
+                                        <td>PEGPAY DB UNAVAILABLE</td>
+                                    </tr>
+                                    <tr>
+                                        <td>32</td>
+                                        <td> GENERAL ERROR AT PEGPAY</td>
+                                    </tr>
+                                    <tr>
+                                        <td>33</td>
+                                        <td>TRANSACTIONDOESN'T EXIST IN PEGPAY</td>
+                                    </tr>
+                                    <tr>
+                                        <td>34</td>
+                                        <td>INVALID TIN</td>
+                                    </tr>
+                                    <tr>
+                                        <td>35</td>
+                                        <td>PLEASE SUPPLY AN AREA FOR (Water) PAYMENTS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>41</td>
+                                        <td>INSUFFICIENT VENDOR ACCOUNT BALANCE</td>
+                                    </tr>
+                                    <tr>
+                                        <td>101</td>
+                                        <td>GENERAL ERROR AT PEGPAY</td>
+                                    </tr>
+                                    <tr>
+                                        <td>100</td>
+                                        <td>
+                                            UNKNOWN URA PAYMENT TYPE<br/>
+                                            NVALID BOUQUET FOR DSTV<br/>
+                                            INVALID UTILITY REFERENCE NUMBER<br/>
+                                            FAILED TO GET BOUQUET DETAILS<br/>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <img src="../images2/codes1.jpg" />
-                            <img src="../images2/codes3.jpg" />
+                            <%--<img src="../images2/codes1.jpg" />
+                            <img src="../images2/codes3.jpg" />--%>
                             <br />
                             <strong>Due to an enormous number of status descriptions under the code 100, It is set forth here 
 that the status code 100 always implies a failure usually to find requested data.
@@ -1765,7 +1922,8 @@ that the status code 100 always implies a failure usually to find requested data
                         <div class="styleup">
                             <h3>SECURITY REQUIREMENTS</h3>
                             <p>
-                                The PegPayAPI Payments Platform will have four levels of security:
+                                The PegPayAPI Payments Platform will have four levels of security:
+
                             </p>
                             <h4>Authentication/Authorization </h4>
                             <p>
@@ -1780,7 +1938,8 @@ ensure that only authorized requests and transactions are processed by the inter
                             </p>
                             <strong>If for any reason the username and/or password assigned to the vendor are entered incorrectly 
 more than three times, the vendor’s account to the platform will be deactivated and the vendor 
-will have to contact Pegasus Technologies to have it reactivated.
+will have to contact Pegasus Technologies to have it reactivated.
+
                             </strong>
                             <h4>Data Integrity</h4>
                             <p>
