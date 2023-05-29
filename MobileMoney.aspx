@@ -1,4 +1,4 @@
-﻿<%@ Page Title="MobileMoney" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="MobileMoney.aspx.cs" Inherits="PegpayDocumentation.About" %>
+﻿<%@ Page Title="Mobile Money Documentation" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="MobileMoney.aspx.cs" Inherits="PegpayDocumentation.About" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="row" style="margin-bottom: 30px;">
@@ -78,7 +78,7 @@ and will provide technical guidance during the integration process if the client
                         <div class="styleup">
                             <h3 id="Integration">INTEGRATION STEPS AND SANDBOX</h3>
                             <p>Getting from code to the live environment is a simple, three step process.</p>
-                            <img src="../Images2/image1.jpg" alt="" />
+                            <img src="Images2/image1.jpg" alt="" />
                             <p>
                                 First, you are going to need a safe place to test your code. The PegPay Payments and Collections
 platform offers a robust sandbox that simplifies the testing and certification process.
@@ -182,7 +182,7 @@ below.
                             <h3 id="Payin">PayIn</h3>
                             <p>This is a transaction request to debit a phone number account at the telecom i.e (MTN, Airtel).</p>
                             <p>Transaction Flow</p>
-                            <img src="../images2/payin.jpg" alt="" />
+                            <img src="Images2/payin.jpg" alt="" />
                             <ol class="">
                                 <p class="fw-400">Description</p>
                                 <li>The client sends a PostTransaction request to the PegPay Payments and Collections API, with a TranType of ‘PULL’.</li>
@@ -203,7 +203,7 @@ below.
                             <h5>Overview</h5>
                             <p>This is when the vendor wishes to credit a phone number at the telecom or a bank Account at the bank. </p>
                             <h6>Transaction Flow</h6>
-                            <img src="../images2/payout.jpg" alt="" />
+                            <img src="Images2/payout.jpg" alt="" />
                             <p class="fw-400">Description</p>
                             <ol>
                                 <li>The client sends a PostTransaction request to the PegPay Payments and Collections API. </li>
@@ -222,7 +222,7 @@ below.
                     <section>
                         <div class="styleup">
                             <h3 id="Parameters">Query String Parameters</h3>
-                            <img src="../images2/RequestParams.jpg" alt="" />
+                            <img src="Images2/RequestParams.jpg" alt="" />
                             <h4>AddendumData</h4>
                             <p>These are extra parameters passed in a key value pair format i.e. whitelist:FROMACCOUNT</p>
                             <p>1. Whitelist</p>
@@ -559,15 +559,15 @@ login, view, download and do reconciliation for all transactions done
                     <section>
                         <div class="styleup">
                             <h3 id="StatusCodes">Status Codes and Descriptions</h3>
-                            <img src="../images2/statuscodes.jpg" alt="" />
-                            <img src="../images2/codes2.jpg" alt="" />
+                            <img src="Images2/statuscodes.jpg" alt="" />
+                            <img src="Images2/codes2.jpg" alt="" />
 
                             <h4>Transaction Types</h4>
-                            <img src="../images2/TransactionTypes.jpg" alt="" />
+                            <img src="Images2/TransactionTypes.jpg" alt="" />
                             <h4>Banks and Telecoms With Specified Bank and Telecom Codes</h4>
-                            <img src="../images2/bankcodes.jpg" alt="" />
+                            <img src="Images2/bankcodes.jpg" alt="" />
                             <h4>Payment Codes</h4>
-                            <img src="../images2/paymentcodes.jpg" />
+                            <img src="Images2/paymentcodes.jpg" />
                             <h5>References</h5>
                             <p>
                                 [1] Digital Signatures in .NETFramework

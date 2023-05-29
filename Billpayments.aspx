@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Billpayments.aspx.cs" Inherits="PegpayDocumentation._Default" %>
+﻿<%@ Page Title="Bill Payments Documentation" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Billpayments.aspx.cs" Inherits="PegpayDocumentation._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div class="row" style="margin-bottom: 30px;">
@@ -100,7 +100,7 @@
                             <h3>SYSTEM DESCRIPTION</h3>
                             <h4>Proposed Bill Collection Procedure at Banks</h4>
 
-                            <img src="../Images2/bill1.jpg" alt="billpaymnt image" />
+                            <img src="Images2/bill1.jpg" alt="billpaymnt image" />
                             <h3>What isthe flow/experience like? </h3>
                             <p>
                                 For Prepaid Vendors, the requirement is for the Vendor to first prefund a Pegasus account at the 
@@ -248,7 +248,7 @@ SOAPAction: "http://PegPayPaymentsApi/QueryCustomerDetails"
                                     </tr>
                                 </tbody>
                             </table>
-                            <%--<img src="../images2/commonparam.jpg" alt="common params" />--%>
+                            <%--<img src="Images2/commonparam.jpg" alt="common params" />--%>
                             <h3>Digital Signature</h3>
 
                             <strong>dataToSign = VendorCode + Password + UtilityCode + CustomerRef OR literally
@@ -314,7 +314,7 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
                                     </tr>
                                 </tbody>
                             </table>
-                            <%--<img src="../images2/nwsc.jpg" alt="nwsc" />--%>
+                            <%--<img src="Images2/nwsc.jpg" alt="nwsc" />--%>
                             <h4>Umeme sample</h4>
                             <pre>
         <code>
@@ -371,7 +371,7 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
                                     </tr>
                                 </tbody>
                             </table>
-                            <%--<img src="../images2/umeme.jpg" alt="umeme" />--%>
+                            <%--<img src="Images2/umeme.jpg" alt="umeme" />--%>
 
                                 <caption>
                                     <h3>Response</h3>
@@ -452,7 +452,7 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <%--<img src="../images2/reponse.jpg" alt="response" />--%>
+                                    <%--<img src="Images2/reponse.jpg" alt="response" />--%>
                                     <p>
                                         Sample of Query Customer Details Response
                                     </p>
@@ -511,7 +511,7 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <%--<img src="../images2/nwscresponse.jpg" />--%>
+                                    <%--<img src="Images2/nwscresponse.jpg" />--%>
                                 </caption>
                         </div>
                     </section>
@@ -676,7 +676,7 @@ SOAPAction: "http://PegPayPaymentsApi/PrepaidVendorPostTransaction"
                                     </tr>
                                 </tbody>
                             </table>
-                            <%--<img src="../images2/postTransaction.jpg" alt="post" />--%>
+                            <%--<img src="Images2/postTransaction.jpg" alt="post" />--%>
 
                             <h4>Post Prepaid Transaction Request </h4>
                             <pre>
@@ -857,7 +857,7 @@ Content-Length: length
                                     </tr>
                                 </tbody>
                             </table>
-                            <%--<img src="../images2/posting.jpg" alt="" />--%>
+                            <%--<img src="Images2/posting.jpg" alt="" />--%>
 
 
                             <h4>Sample Of Post Prepaid Transaction Response </h4>
@@ -901,7 +901,7 @@ Content-Length: length
                                     </tr>
                                 </tbody>
                             </table>
-                            <%--<img src="../images2/postres.jpg" />--%>
+                            <%--<img src="Images2/postres.jpg" />--%>
 
                             <h3>Special Use Cases:</h3>
                             <p>
@@ -1694,8 +1694,8 @@ being made
                             </table>
 
 
-                            <%--<img src="../images2/fieldmap.jpg" />
-                            <img src="../images2/feildmap2.jpg" />--%>
+                            <%--<img src="Images2/fieldmap.jpg" />
+                            <img src="Images2/feildmap2.jpg" />--%>
                             <h3>CODES</h3>
                             <h5>Status codes</h5>
                             <table class="table">
@@ -1869,8 +1869,8 @@ being made
                                     </tr>
                                 </tbody>
                             </table>
-                            <%--<img src="../images2/codes1.jpg" />
-                            <img src="../images2/codes3.jpg" />--%>
+                            <%--<img src="Images2/codes1.jpg" />
+                            <img src="Images2/codes3.jpg" />--%>
                             <br />
                             <strong>Due to an enormous number of status descriptions under the code 100, It is set forth here 
 that the status code 100 always implies a failure usually to find requested data.
@@ -1882,19 +1882,19 @@ that the status code 100 always implies a failure usually to find requested data
                             <ol>
                                 <li>Electricity Payment types
                                     <br />
-                                    <img src="../images2/electypes.jpg" />
+                                    <img src="Images2/electypes.jpg" />
                                 </li>
                                 <li>Electricity Customer types
                                     <br />
-                                    <img src="../images2/eleccust.jpg" />
+                                    <img src="Images2/eleccust.jpg" />
                                 </li>
                                 <li>(DSTV) Customer types
                                     <br />
-                                    <img src="../images2/dstvtypes.jpg" />
+                                    <img src="Images2/dstvtypes.jpg" />
                                 </li>
                                 <li>Utility codes
                                     <br />
-                                    <img src="../images2/utilitycode.jpg" />
+                                    <img src="Images2/utilitycode.jpg" />
                                 </li>
                                 <li>
                                     <dl>

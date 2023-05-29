@@ -130,6 +130,7 @@
     <Content Include="Images2\reponse.JPG" />
     <Content Include="Images2\umeme.JPG" />
     <Content Include="Images2\utilitycode.JPG" />
+    <Content Include="logo.ico" />
     <Content Include="MobileMoney.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />

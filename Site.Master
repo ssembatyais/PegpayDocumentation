@@ -6,7 +6,7 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <title><%: Page.Title %></title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
@@ -18,7 +18,7 @@
     <link href="Content/Site.css" rel="stylesheet" />
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <webopt:bundlereference runat="server" path="~/Content/css" />
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="~/logo.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
 <body>
@@ -50,16 +50,16 @@
                     <span class="icon-bar"></span>
                 </button>--%>
                 <ul class="nav navbar-nav "style="float: right;display: flex;align-items: baseline;">
-                    <li><a href="Billpayments" class=" navbar-brand" style=" padding-top:10px;"><img style=" height: 30px; width: auto;" src="../images2/logo.png" /></a></li>
-                    <li><a href="Billpayments" class=" navbar-brand" style=" padding-top:10px;"><img style=" height: 30px; width: auto;" src="../images2/name.png" /></a></li>
-                    <li><a class="navbar-brand" runat="server" href="Billpayments">Pegpay Docs</a></li>
+                    <li><a href="Billpayments" class=" navbar-brand" style=" padding-top:10px;"><img style=" height: 30px; width: auto;" src="Images2/logo.png" /></a></li>
+                    <li><a href="Billpayments" class=" navbar-brand" style=" padding-top:10px;"><img style=" height: 30px; width: auto;" src="Images2/name.png" /></a></li>
+                    <li><a class="navbar-brand" runat="server" href="Billpayments">Pegpay Documentation</a></li>
                 </ul>
             </div>
             <div class="col-md-6">
-                <ul class="nav navbar-nav "style="float: right;display: flex;align-items: baseline;">
+                <ul class="nav nav-pills" style="float: right;display: flex;align-items: baseline;">
                     <li> <input class="search"  type="search" placeholder="Search" name="query" onsubmit =""/> </li>
-                    <li><a class="link-primary " style="color:#333333" runat="server" href="~/Billpayments">Bill Payments API Doc</a></li>
-                    <li><a runat="server" style="color:#333333" href="~/MobileMoney">Mobile Money API Doc</a></li>
+                    <li class="nav-link active" id="BillPayments"><a runat="server" href="~/Billpayments" onclick="switchTab('BillPayments')">Bill Payments API Doc</a></li>
+                    <li class="nav-link"><a runat="server" href="~/MobileMoney">Mobile Money API Doc</a></li>
                 </ul>
             </div>
         </div>
@@ -67,11 +67,20 @@
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-        <div class="footerdown" style="display: flex;justify-content: space-around;align-items: center;z-index: 2;">
+        <div class="footerdown" style="display: flex;justify-content: space-around;align-items: flex-start;z-index: 2;">
             <p>&copy; <%: DateTime.Now.Year %> - Pegpay Documentation</p>
         </div>
     </form>
     <script src="Scripts/jquery-3.4.1.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        // Select all tabs
+        $('.nav-tabs a').click(function () {
+            $('.nav-tabs a[href="#home"]').tab('show')
+        })
+
+
+
+    </script>
 </body>
 </html>
